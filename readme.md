@@ -1,4 +1,5 @@
 # F1 Race Outcome Predictor
+**Live demo:** https://f1-predictor-wshjdayvdgxpoaltj7bxum.streamlit.app/
 
 Predicts Formula 1 finishing order from qualifying position, recent form, team strength, and track history, then looks at **where and why predictions fail**.
 
