@@ -48,6 +48,37 @@ The number of DNFs is only a rough measure of chaos. Miami had 4 DNFs and was pr
 - Weather features could not be loaded (the data source failed), so rain is not modeled
 - Only 24 test races, so small differences between models are noise
 - DNF count is a crude stand-in for chaos
+## 2026: what happens when the rules reset?
+
+2026 brought new regulations, 11 teams (including Audi and Cadillac), and a different pecking order. I pulled the 17 races run so far and made team features restart each season, while driver features carry over.
+
+Three predictors were compared on all 17 races:
+- **Grid baseline:** finish where you qualified
+- **Frozen model:** trained on 2023-2025 only
+- **Walk-forward model:** retrained before each 2026 race on everything earlier
+
+| Races | Grid | Frozen | Walk-forward |
+|---|---|---|---|
+| All 17 | 0.647 | 0.658 | 0.664 |
+| 1-8 | 0.638 | 0.632 | 0.628 |
+| 9-17 | 0.654 | 0.681 | 0.695 |
+
+*Average Spearman correlation.*
+
+Paired comparison across the 17 races:
+
+| Comparison | Mean gap | Better in |
+|---|---|---|
+| Walk-forward vs grid | +0.017 (± 0.020) | 9 of 17 |
+| Frozen vs grid | +0.011 (± 0.018) | 7 of 17 |
+| Walk-forward vs frozen | +0.006 (± 0.009) | 8 of 17 |
+
+**Finding:** across 17 races of the 2026 rule reset, a model using form, team strength, and track history was statistically tied with predicting that drivers finish where they qualified. Retraining on 2026 data as the season went on made no reliable difference. A likely reason is that qualifying position already reflects car pace and driver form (a hypothesis, not tested here).
+
+### Live test: United States Grand Prix
+The prediction is made after qualifying, pushed to GitHub before the race, and scored afterward.
+- Prediction: *(add after qualifying)*
+- Result: *(add after the race)*
 
 ## Run it yourself
 ```

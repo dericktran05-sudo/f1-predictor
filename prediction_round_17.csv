@@ -1,0 +1,23 @@
+predicted,driver,team,grid
+1,VER,Red Bull,1.0
+2,LEC,Ferrari,2.0
+3,NOR,McLaren,5.0
+4,HAM,Ferrari,3.0
+5,ANT,Mercedes,4.0
+6,PIA,McLaren,7.0
+7,RUS,Mercedes,6.0
+8,HAD,Red Bull,22.0
+9,GAS,Alpine F1 Team,8.0
+10,LAW,RB F1 Team,9.0
+11,LIN,RB F1 Team,10.0
+12,HUL,Audi,11.0
+13,BOR,Audi,15.0
+14,BEA,Haas F1 Team,12.0
+15,OCO,Haas F1 Team,13.0
+16,SAI,Williams,14.0
+17,COL,Alpine F1 Team,16.0
+18,ALO,Aston Martin,17.0
+19,ALB,Williams,18.0
+20,STR,Aston Martin,19.0
+21,PER,Cadillac F1 Team,20.0
+22,BOT,Cadillac F1 Team,21.0
